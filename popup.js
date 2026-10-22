@@ -61,7 +61,7 @@ async function getToken() {
 }
 
 (async () => {
-  remoteTabs = await chrome.tabs.query({ url: "*://*.ulinedm.com/*" });
+  remoteTabs = await chrome.tabs.query({ url: "*://*.example.com/*" });
   localTabs = await chrome.tabs.query({ url: "*://localhost/*" });
 
   // Is the tab the user is looking at a localhost tab?
