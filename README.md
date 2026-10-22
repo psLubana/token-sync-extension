@@ -10,7 +10,7 @@ Locally running apps (for example `http://localhost:9081/item-inquiry-app/ui`) n
 
 ## Features
 
-- Copies `localStorage.token` from any open `*.ulinedm.com` tab into a `localhost` tab
+- Copies `localStorage.token` from any open `*.example.com` tab into a `localhost` tab
 - Selects the current tab automatically when you open the popup on a localhost tab (shown in green as **Current tab**)
 - Otherwise pre-selects the localhost tab that belongs to the same app as the source tab
 - Always puts a copy of the token on the clipboard
@@ -30,8 +30,8 @@ After changing any file, click the reload icon on the extension card.
 
 ## Usage
 
-1. Open the deployed app in your browser, for example `https://repair-center-app.apidev.ulinedm.com/repair-center-app/ui/`, and sign in if asked.
-2. Open the local app in another tab, for example `http://localhost:9083/repair-center-app/ui/`.
+1. Open the deployed app in your browser, for example `https://example.com`, and sign in if asked.
+2. Open the local app in another tab, for example `http://localhost:9083/testapp/`.
 3. Click the **Token Sync** icon.
 4. Check the two dropdowns, then click **Copy token to localhost tab**.
 
@@ -42,7 +42,7 @@ For sys or uat, open that environment's tab and choose it in the first dropdown.
 Allowed sites are set in `manifest.json`:
 
 ```json
-"host_permissions": ["*://*.ulinedm.com/*", "*://localhost/*"]
+"host_permissions": ["*://*.example.com/*", "*://localhost/*"]
 ```
 
 Change the domain to match your environment. The key name `token` is set in `readToken` and `writeToken` in `popup.js`.
